@@ -22,7 +22,9 @@
       rel="stylesheet"
     />
     <link rel="icon" href="assets/images/author-a.png">
-    <meta http-equiv="refresh" content = 5>
+    <!--<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+     <meta http-equiv="refresh" content = 5> -->
     <title>Ahmet Haydar Ornek Personal Page</title>
 
     <!-- Bootstrap core CSS -->
@@ -573,6 +575,24 @@
         checkSection();
       });
     </script>
+
+    <script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>
 
   </body>
 </html>
